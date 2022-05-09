@@ -2,9 +2,37 @@
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
     <h1>Posts</h1>
+    <a href="/posts/create">New Post</a>
     <ol>
       <% results.forEach(function(post) {%>
-      <li><%= post.message %></li>
+
+      <li>
+        <h2><%= post.postedBy.name %></h2>
+        <p><%= post.message %></p>
+
+        <figure>
+          <img src="<%= post.imageUrl %>" alt="" width="100" />
+          <figcaption><%= post.createdAt %></figcaption>
+        </figure>
+
+        <section>
+          <h3>Liked by:</h3>
+          <ul>
+            <% post.likedBy.forEach(function(person) {%>
+            <li><%= person.name %></li>
+            <% }); %>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Disliked by:</h3>
+          <ul>
+            <% post.dislikedBy.forEach(function(person) {%>
+            <li><%= person.name %></li>
+            <% }); %>
+          </ul>
+        </section>
+      </li>
       <% }); %>
     </ol>
     <%if (next) { %>
