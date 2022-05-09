@@ -5,11 +5,16 @@
     <form method="post" action="/posts/create">
       <label>
         Message:
-        <textarea name="message" rows="4"></textarea>
+        <textarea required name="message" rows="4"></textarea>
       </label>
       <label>
         Image Url:
-        <input type="url" name="imageUrl" />
+        <input
+          required
+          type="url"
+          name="imageUrl"
+          placeholder="https://example.jpg"
+        />
       </label>
       <button type="submit">Submit</button>
     </form>
