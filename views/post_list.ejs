@@ -3,17 +3,17 @@
   <body>
     <h1>Posts</h1>
     <a href="/posts/create">New Post</a>
-    <ol>
+    <ol class="postContainer">
       <% results.forEach(function(post) {%>
 
-      <li>
-        <h2><%= post.postedBy.name %></h2>
-        <p><%= post.message %></p>
+      <li class="post">
+        <div class="imageContainer">
+          <img src="<%= post.imageUrl %>" alt="" />
+        </div>
 
-        <figure>
-          <img src="<%= post.imageUrl %>" alt="" width="100" />
-          <figcaption><%= post.createdAt %></figcaption>
-        </figure>
+        <h2><%= post.postedBy.name %></h2>
+        <p><%= post.createdAt %></p>
+        <p><%= post.message %></p>
 
         <section>
           <h3>Liked by:</h3>

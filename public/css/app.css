@@ -1,1 +1,32 @@
 /* Add your styles here. */
+* {
+  margin: 0;
+  color: #dcdcdc;
+}
+
+.postContainer {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  background-color: #252a38;
+}
+
+.post {
+  background-color: #151820;
+  list-style-type: none;
+  width: 25rem;
+}
+
+.imageContainer {
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
