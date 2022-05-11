@@ -1,6 +1,8 @@
 <html lang="en-gb">
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
+    <img class = "cover-image" src="<%= coverImageUrl %>" alt="cover image"/>
+    <div class = "background-blue"></div>
     <div class="flex-container">
       <img class="profile-img" src="<%= profileImageUrl %>" alt="" />
       <div>
@@ -9,6 +11,7 @@
         <p class="profile-email"><%= email%></p>
       </div>
     </div>
+    <h3 class="profile-name"><%= name.split(' ')[0] %>'s Posts</h3>
   </body>
   <%- include('_footer') -%>
 </html>
