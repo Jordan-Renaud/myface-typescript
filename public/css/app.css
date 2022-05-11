@@ -72,14 +72,12 @@ body {
   font-size: 14px;
   font-weight: bold;
   line-height: 20px;
-  margin: 0 10px;
 }
 
 .profile-email {
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
-  margin: 0 10px;
 }
 
 .cover-image {
@@ -90,6 +88,36 @@ body {
   object-fit: cover;
 }
 
+.profile-message {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.date {
+  font-size: 10px;
+  font-weight: normal;
+}
+
 .post-image {
-  width: 80vw;
+  width: 70vw;
+  height: 45vw;
+}
+
+.post-container {
+  background-color: #151820;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.name-date {
+  padding: 10px;
+}
+
+.page-heading {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+  margin: 15px 25px;
 }

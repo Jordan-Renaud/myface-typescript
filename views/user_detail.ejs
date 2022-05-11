@@ -12,12 +12,16 @@
       </div>
     </div>
 
-    <h3 class="profile-name"><%= name.split(' ')[0] %>'s Posts</h3>
+    <h3 class="page-heading"><%= name.split(' ')[0] %>'s Posts</h3>
     <% posts.forEach(function(post) {%>
-    <img class="" src="<%= post.imageUrl %>" alt="post image" />
-    <p><%= post.message %></p>
-    <p><%= username %></p>
-    <p><%= post.createdAt %></p>
+    <section class = "post-container">
+        <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
+        <div class = "name-date">
+            <p class = "profile-username"><%= username %></p>
+            <p class = "date"><%= post.createdAt.split(' ')[0] %></p>
+        </div>
+        <p class = "profile-message"><%= post.message %></p>
+    </section>
     <% }); %>
   </body>
   <%- include('_footer') -%>
