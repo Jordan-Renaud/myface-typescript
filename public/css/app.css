@@ -48,7 +48,7 @@ body {
 
 .flex-container {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   width: 100vw;
   padding: 20px;
   margin-top: 135px;
@@ -65,7 +65,7 @@ body {
   font-size: 24px;
   font-weight: normal;
   line-height: 32px;
-  margin: 15px 15px;
+  margin: 15px 0;
 }
 
 .profile-username {
@@ -100,6 +100,14 @@ body {
   font-weight: normal;
 }
 
+.profile-only-name {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+  margin: 15px 20px;
+}
+
+
 .post-image {
   width: 70vw;
   height: 45vw;
@@ -115,9 +123,31 @@ body {
   padding: 10px;
 }
 
+  .after-cover {
+    margin-bottom: 10px;
+  }
+
+
 .page-heading {
   font-size: 24px;
   font-weight: normal;
   line-height: 32px;
   margin: 15px 25px;
 }
+
+.cover-userlist
+    {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 80vw;
+      margin: 5px auto;
+    }
+  .profile-userlist
+    {
+      position: absolute;
+      top: 35px;
+      left: 10px;
+      border-radius: 50%;
+      width: 25vw;
+    }

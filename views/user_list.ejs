@@ -4,20 +4,17 @@
     <h1>Users</h1>
     <ol>
       <% results.forEach(function(user) {%>
-      <li>
-        <figure>
-          <img src="<%= user.coverImageUrl %>" alt="" height="100" />
-          <figcaption>
-            <a href="users/<%= user.id %>"> <%= user.name %></a>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="<%= user.profileImageUrl %>" alt="" width="100" />
-          <figcaption><%= user.username %></figcaption>
-        </figure>
-        <p>User's Email: <%= user.email %></p>
-      </li>
+        <li>
+          <div style="position: relative; left: 0; top: 0;">
+          <a href="users/<%= user.id %>"> <%= user.name %> </a>
+          <img class="cover-userlist" src="<%= user.coverImageUrl %>"/>
+          <img class="profile-userlist" src="<%= user.profileImageUrl %>"/>
+          <div class="after-cover"> 
+            <%= user.username %>, <%= user.email %>
+          </div>
+         
+        </div>
+        </li>
       <% }); %>
     </ol>
     <%if (next) { %>
