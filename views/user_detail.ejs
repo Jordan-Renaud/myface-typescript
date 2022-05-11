@@ -1,8 +1,14 @@
 <html lang="en-gb">
-<%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1><%= name %></h1>
-</body>
-<%- include('_footer') -%>
+  <%- include('_head') -%> <%- include('_header') -%>
+  <body>
+    <div class="flex-container">
+      <img class="profile-img" src="<%= profileImageUrl %>" alt="" />
+      <div>
+        <h1 class="profile-name"><%= name %></h1>
+        <p class="profile-username"><%= username%></p>
+        <p class="profile-email"><%= email%></p>
+      </div>
+    </div>
+  </body>
+  <%- include('_footer') -%>
 </html>
