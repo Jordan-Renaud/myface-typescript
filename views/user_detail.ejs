@@ -17,14 +17,25 @@
     <section class="post-container">
       <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
       <div class="post-text-content">
-        <div class="name-date">
-          <p class="profile-username"><%= username %></p>
-          <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
-        </div>
+        <p class="profile-username"><%= username %></p>
+        <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
         <p class="message"><%= post.message %></p>
       </div>
     </section>
     <% }); %>
+
+    <h3 class="user-page-heading title">
+      Posts <%= name.split(' ')[0] %> Liked
+    </h3>
+    <% likes.forEach(function(post) {%>
+    <section class="post-container">
+      <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
+      <div class="post-text-content">
+        <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
+        <p class="message"><%= post.message %></p>
+      </div>
+    </section>
+    <% console.log(post.postedBy) %> <% }); %>
   </body>
   <%- include('_footer') -%>
 </html>
