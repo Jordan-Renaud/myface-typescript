@@ -1,5 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", function () {
-  const changeColourButton = document.getElementById("new-colour-button");
+  /*const changeColourButton = document.getElementById("new-colour-button");
   changeColourButton.addEventListener("click", changeColour);
   const posts = document.getElementsByClassName("post");
   function changeColour() {
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }, ${Math.random() * 255})`;
     }
   }
-
+*/
   const menuButton = document.getElementById("menu");
   menuButton.addEventListener("click", hideMenu);
   function hideMenu() {

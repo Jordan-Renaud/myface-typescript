@@ -149,3 +149,8 @@ body {
 .button.colour-button {
     color: #151820;
 }
+
+#menuBar {
+  display: none;
+
+}
