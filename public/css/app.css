@@ -21,7 +21,7 @@ body {
 }
 
 .post {
-  background-color: #151820;
+  background-color: green;
   list-style-type: none;
   width: 25rem;
 }
@@ -107,7 +107,6 @@ body {
   margin: 15px 20px;
 }
 
-
 .post-image {
   width: 70vw;
   height: 45vw;
@@ -123,10 +122,9 @@ body {
   padding: 10px;
 }
 
-  .after-cover {
-    margin-bottom: 10px;
-  }
-
+.after-cover {
+  margin-bottom: 10px;
+}
 
 .page-heading {
   font-size: 24px;
@@ -135,19 +133,17 @@ body {
   margin: 15px 25px;
 }
 
-.cover-userlist
-    {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 80vw;
-      margin: 5px auto;
-    }
-  .profile-userlist
-    {
-      position: absolute;
-      top: 35px;
-      left: 10px;
-      border-radius: 50%;
-      width: 25vw;
-    }
+.cover-userlist {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  margin: 5px auto;
+}
+.profile-userlist {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  border-radius: 50%;
+  width: 25vw;
+}
