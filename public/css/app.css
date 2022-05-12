@@ -30,13 +30,47 @@ body {
   margin: 0;
 }
 
-/* img {
+/* || fonts */
+.title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.sub-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.button {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.body {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.secondary {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+/* || user page */
+.user-page .cover-image {
+  width: 100vw;
+  height: 25vh;
+  position: absolute;
+  z-index: -1;
   object-fit: cover;
+}
 
-  max-height: 100%;
-} */
-
-.background-blue {
+.user-page .background-blur {
   width: 100vw;
   height: 20vh;
   background-color: #252a38;
@@ -46,7 +80,7 @@ body {
   z-index: -1;
 }
 
-.flex-container {
+.user-page .profile-info-container {
   display: flex;
   gap: 20px;
   width: 100vw;
@@ -54,83 +88,47 @@ body {
   margin-top: 135px;
 }
 
-.profile-img {
+.user-page .profile-info-container .profile-img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   border: 3px solid #dcdcdc;
 }
 
-.profile-name {
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 32px;
+.user-page .profile-info-container .profile-name {
   margin: 15px 0;
 }
 
-.profile-username {
-  font-size: 14px;
+.user-page .profile-info-container .profile-username {
   font-weight: bold;
-  line-height: 20px;
 }
 
-.profile-email {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 20px;
-}
-
-.cover-image {
-  width: 100vw;
-  height: 25vh;
-  position: absolute;
-  z-index: -1;
-  object-fit: cover;
-}
-
-.profile-message {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 20px;
-  padding: 10px;
-}
-
-.date {
-  font-size: 10px;
-  font-weight: normal;
-}
-
-.profile-only-name {
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 32px;
+.user-page-heading {
   margin: 15px 20px;
 }
 
-.post-image {
-  width: 70vw;
-  height: 45vw;
-}
-
+/* || user page - post */
 .post-container {
   background-color: #151820;
   width: 70vw;
   margin: 0 auto;
 }
 
-.name-date {
-  padding: 10px;
+.post-container .post-text-content {
+  padding: 5px 15px;
+}
+
+.post-container .post-text-content .message {
+  padding: 10px 0;
+}
+
+.post-container .post-image {
+  width: 70vw;
+  height: 45vw;
 }
 
 .after-cover {
   margin-bottom: 10px;
-}
-
-.page-heading {
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 32px;
-  margin: 15px 25px;
 }
 
 .cover-userlist {

@@ -1,26 +1,28 @@
 <html lang="en-gb">
   <%- include('_head') -%> <%- include('_header') -%>
-  <body>
+  <body class="user-page body">
     <img class="cover-image" src="<%= coverImageUrl %>" alt="cover image" />
-    <div class="background-blue"></div>
-    <div class="flex-container">
+    <div class="background-blur"></div>
+    <div class="profile-info-container">
       <img class="profile-img" src="<%= profileImageUrl %>" alt="" />
       <div>
-        <h1 class="profile-name"><%= name %></h1>
+        <h1 class="profile-name title"><%= name %></h1>
         <p class="profile-username"><%= username%></p>
         <p class="profile-email"><%= email%></p>
       </div>
     </div>
 
-    <h3 class="profile-only-name"><%= name.split(' ')[0] %>'s Posts</h3>
+    <h3 class="user-page-heading title"><%= name.split(' ')[0] %>'s Posts</h3>
     <% posts.forEach(function(post) {%>
-    <section class = "post-container">
-        <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
-        <div class = "name-date">
-            <p class = "profile-username"><%= username %></p>
-            <p class = "date"><%= post.createdAt.split(' ')[0] %></p>
+    <section class="post-container">
+      <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
+      <div class="post-text-content">
+        <div class="name-date">
+          <p class="profile-username"><%= username %></p>
+          <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
         </div>
-        <p class = "profile-message"><%= post.message %></p>
+        <p class="message"><%= post.message %></p>
+      </div>
     </section>
     <% }); %>
   </body>
