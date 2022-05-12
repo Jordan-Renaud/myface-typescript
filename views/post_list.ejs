@@ -3,7 +3,9 @@
   <body>
     <h1>Posts</h1>
     <a href="/posts/create">New Post</a>
-    <button class = "button colour-button" id="new-colour-button">Change colour</button>
+    <button class="button colour-button" id="new-colour-button">
+      Change colour
+    </button>
     <ol class="postContainer">
       <% results.forEach(function(post) {%>
 
@@ -51,17 +53,6 @@
     <% } %> <%if (previous) { %>
     <a href="<%= previous %>">Previous</a>
     <% } %>
-    <script>
-      const changeColourButton = document.getElementById("new-colour-button");
-      changeColourButton.addEventListener("click", changeColour);
-      const posts = document.getElementsByClassName("post");
-      function changeColour() {
-        for (let i = 0; i < posts.length; i++) {
-        posts[i].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-      };
-    }
-    </script>
   </body>
   <%- include('_footer') -%>
 </html>
-
