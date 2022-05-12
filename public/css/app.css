@@ -147,7 +147,7 @@ body {
 }
 
 .button.colour-button {
-    color: #151820;
+  color: #151820;
 }
 
 #menuBar {
@@ -160,6 +160,7 @@ body {
   border: none;
   float: right;
 }
+
 .header {
   float: right;
 }

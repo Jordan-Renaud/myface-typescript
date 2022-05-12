@@ -1,25 +1,15 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  /*const changeColourButton = document.getElementById("new-colour-button");
-  changeColourButton.addEventListener("click", changeColour);
-  const posts = document.getElementsByClassName("post");
-  function changeColour() {
-    for (let i = 0; i < posts.length; i++) {
-      posts[i].style.backgroundColor = `rgb(${Math.random() * 255}, ${
-        Math.random() * 255
-      }, ${Math.random() * 255})`;
-    }
-  }
-*/
   const menuButton = document.getElementById("menu");
-  menuButton.addEventListener("click", hideMenu);
-  function hideMenu() {
+  menuButton.addEventListener("click", showMenu);
+  function showMenu() {
     const menuBar = document.getElementById("menuBar");
-    if (menuBar.style.display === "none") {
+    if (menuBar.style.display === "none" || !menuBar.style.display) {
+      menuButton.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
       menuBar.style.display = "block";
-      menuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>'
     } else {
       menuBar.style.display = "none";
+      menuButton.innerHTML  = '<i class="fa fa-bars"></i>'
     }
   }
 });
