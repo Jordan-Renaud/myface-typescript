@@ -9,4 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }, ${Math.random() * 255})`;
     }
   }
+
+  const menuButton = document.getElementById("menu");
+  menuButton.addEventListener("click", hideMenu);
+  function hideMenu() {
+    const menuBar = document.getElementById("menuBar");
+    if (menuBar.style.display === "none") {
+      menuBar.style.display = "block";
+    } else {
+      menuBar.style.display = "none";
+    }
+  }
 });
