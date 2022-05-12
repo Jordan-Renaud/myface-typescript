@@ -84,7 +84,6 @@ body {
   display: flex;
   gap: 20px;
   width: 100vw;
-  padding: 20px;
   margin-top: 135px;
 }
 
@@ -138,6 +137,7 @@ body {
   width: 80vw;
   margin: 5px auto;
 }
+
 .profile-userlist {
   position: absolute;
   top: 35px;
@@ -152,5 +152,26 @@ body {
 
 #menuBar {
   display: none;
+}
 
+#menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  float: right;
+}
+.header {
+  float: right;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.header .title {
+  text-align: center;
 }
