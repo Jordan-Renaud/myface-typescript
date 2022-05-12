@@ -21,7 +21,7 @@ body {
 }
 
 .post {
-  background-color: green;
+  background-color: #151820;
   list-style-type: none;
   width: 25rem;
 }
@@ -144,4 +144,8 @@ body {
   left: 10px;
   border-radius: 50%;
   width: 25vw;
+}
+
+.button.colour-button {
+    color: #151820;
 }
