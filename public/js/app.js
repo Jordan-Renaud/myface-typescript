@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuBar = document.getElementById("menuBar");
     if (menuBar.style.display === "none") {
       menuBar.style.display = "block";
+      menuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>'
     } else {
       menuBar.style.display = "none";
     }
