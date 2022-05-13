@@ -24,8 +24,8 @@
             </ul>
           </section>
 
-          <% if (!post.likedBy.find(p => p.id === 1) && !post.dislikedBy.find(p
-          => p.id === 1)) { %>
+          <% %> <% if (!post.likedBy.find(p => p.id === 1) &&
+          !post.dislikedBy.find(p => p.id === 1)) { %>
           <form method="post" action="/posts/<%= post.id %>/like/">
             <button>👍</button>
           </form>
