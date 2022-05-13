@@ -139,7 +139,7 @@ body {
 }
 
 .profile-userlist {
-  position: absolute;
+  /* position: absolute; */
   top: 35px;
   left: 10px;
   border-radius: 50%;
@@ -152,17 +152,23 @@ body {
 
 #menuBar {
   display: none;
+  background-color: #151820;
+  height: 100vh;
+  width: 60vw;
 }
 
 #menu {
-  background-color: transparent;
+  background-color: #151820;
   font-size: 40px;
   border: none;
   float: right;
 }
 
 .header {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .link {
@@ -175,3 +181,4 @@ body {
 .header .title {
   text-align: center;
 }
+

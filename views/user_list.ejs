@@ -1,6 +1,7 @@
 <html lang="en-gb">
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
+    <div id="current-page">
     <h1>Users</h1>
     <ol>
       <% results.forEach(function(user) {%>
@@ -22,6 +23,7 @@
     <% } %> <%if (previous) { %>
     <a href="<%= previous %>">Previous</a>
     <% } %>
+  </div>
   </body>
   <%- include('_footer') -%>
 </html>

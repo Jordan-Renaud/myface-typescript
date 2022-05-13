@@ -1,54 +1,56 @@
 <html lang="en-gb">
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
-    <h1>Posts</h1>
-    <ol class="postContainer">
-      <% results.forEach(function(post) {%>
+    <div>
+      <h1>Posts</h1>
+      <ol class="postContainer">
+        <% results.forEach(function(post) {%>
 
-      <li class="post">
-        <div class="imageContainer">
-          <img src="<%= post.imageUrl %>" alt="" />
-        </div>
+        <li class="post">
+          <div class="imageContainer">
+            <img src="<%= post.imageUrl %>" alt="" />
+          </div>
 
-        <h2><%= post.postedBy.name %></h2>
-        <p><%= post.createdAt.split(' ')[0] %></p>
-        <p><%= post.message %></p>
+          <h2><%= post.postedBy.name %></h2>
+          <p><%= post.createdAt.split(' ')[0] %></p>
+          <p><%= post.message %></p>
 
-        <section>
-          <h3>Liked by:</h3>
-          <ul>
-            <% post.likedBy.forEach(function(person) {%>
-            <li><%= person.name %></li>
-            <% }); %>
-          </ul>
-        </section>
+          <section>
+            <h3>Liked by:</h3>
+            <ul>
+              <% post.likedBy.forEach(function(person) {%>
+              <li><%= person.name %></li>
+              <% }); %>
+            </ul>
+          </section>
 
-        <% if (!post.likedBy.find(p => p.id === 1) && !post.dislikedBy.find(p =>
-        p.id === 1)) { %>
-        <form method="post" action="/posts/<%= post.id %>/like/">
-          <button>👍</button>
-        </form>
-        <form method="post" action="/posts/<%= post.id %>/dislike/">
-          <button>👎</button>
-        </form>
-        <% } %>
+          <% if (!post.likedBy.find(p => p.id === 1) && !post.dislikedBy.find(p
+          => p.id === 1)) { %>
+          <form method="post" action="/posts/<%= post.id %>/like/">
+            <button>👍</button>
+          </form>
+          <form method="post" action="/posts/<%= post.id %>/dislike/">
+            <button>👎</button>
+          </form>
+          <% } %>
 
-        <section>
-          <h3>Disliked by:</h3>
-          <ul>
-            <% post.dislikedBy.forEach(function(person) {%>
-            <li><%= person.name %></li>
-            <% }); %>
-          </ul>
-        </section>
-      </li>
-      <% }); %>
-    </ol>
-    <%if (next) { %>
-    <a href="<%= next %>">Next</a>
-    <% } %> <%if (previous) { %>
-    <a href="<%= previous %>">Previous</a>
-    <% } %>
+          <section>
+            <h3>Disliked by:</h3>
+            <ul>
+              <% post.dislikedBy.forEach(function(person) {%>
+              <li><%= person.name %></li>
+              <% }); %>
+            </ul>
+          </section>
+        </li>
+        <% }); %>
+      </ol>
+      <%if (next) { %>
+      <a href="<%= next %>">Next</a>
+      <% } %> <%if (previous) { %>
+      <a href="<%= previous %>">Previous</a>
+      <% } %>
+    </div>
   </body>
   <%- include('_footer') -%>
 </html>
