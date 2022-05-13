@@ -180,5 +180,7 @@ body {
 
 .header .title {
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 

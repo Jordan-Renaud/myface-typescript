@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       menuBar.style.display = "none";
       menuButton.innerHTML  = '<i class="fa fa-bars"></i>'
+      page.style.filter='blur(0px)';
     }
   }
 });
