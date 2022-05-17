@@ -150,20 +150,7 @@ body {
   color: #151820;
 }
 
-#menuBar {
-  display: none;
-  background-color: #151820;
-  height: 100vh;
-  width: 60vw;
-}
-
-#menu {
-  background-color: #252a38;
-  font-size: 40px;
-  border: none;
-  float: right;
-}
-
+/* || user page - post */
 .header {
   position: absolute;
   top: 0;
@@ -171,11 +158,18 @@ body {
   z-index: 100;
 }
 
-.link {
-  display: block;
-  text-decoration: none;
-  padding: 10px;
-  text-align: center;
+.header .menu-button {
+  background-color: #252a38;
+  font-size: 40px;
+  border: none;
+  float: right;
+}
+
+.header .menu-bar {
+  display: none;
+  background-color: #151820;
+  height: 100vh;
+  width: 60vw;
 }
 
 .header .title {
@@ -184,3 +178,9 @@ body {
   padding-bottom: 50px;
 }
 
+.header .link {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+}
