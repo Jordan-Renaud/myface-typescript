@@ -1,41 +1,43 @@
 <html lang="en-gb">
   <%- include('_head') -%> <%- include('_header') -%>
   <body class="user-page body">
-    <img class="cover-image" src="<%= coverImageUrl %>" alt="cover image" />
-    <div class="background-blur"></div>
-    <div class="profile-info-container">
-      <img class="profile-img" src="<%= profileImageUrl %>" alt="" />
-      <div>
-        <h1 class="profile-name title"><%= name %></h1>
-        <p class="profile-username"><%= username%></p>
-        <p class="profile-email"><%= email%></p>
+    <div id="current-page">
+      <img class="cover-image" src="<%= coverImageUrl %>" alt="cover image" />
+      <div class="background-blur"></div>
+      <div class="profile-info-container">
+        <img class="profile-img" src="<%= profileImageUrl %>" alt="" />
+        <div>
+          <h1 class="profile-name title"><%= name %></h1>
+          <p class="profile-username"><%= username%></p>
+          <p class="profile-email"><%= email%></p>
+        </div>
       </div>
+
+      <h3 class="user-page-heading title"><%= name.split(' ')[0] %>'s Posts</h3>
+      <% posts.forEach(function(post) {%>
+      <section class="post-container">
+        <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
+        <div class="post-text-content">
+          <p class="profile-username"><%= username %></p>
+          <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
+          <p class="message"><%= post.message %></p>
+        </div>
+      </section>
+      <% }); %>
+
+      <h3 class="user-page-heading title">
+        Posts <%= name.split(' ')[0] %> Liked
+      </h3>
+      <% likes.forEach(function(post) {%>
+      <section class="post-container">
+        <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
+        <div class="post-text-content">
+          <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
+          <p class="message"><%= post.message %></p>
+        </div>
+      </section>
+      <% }); %>
     </div>
-
-    <h3 class="user-page-heading title"><%= name.split(' ')[0] %>'s Posts</h3>
-    <% posts.forEach(function(post) {%>
-    <section class="post-container">
-      <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
-      <div class="post-text-content">
-        <p class="profile-username"><%= username %></p>
-        <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
-        <p class="message"><%= post.message %></p>
-      </div>
-    </section>
-    <% }); %>
-
-    <h3 class="user-page-heading title">
-      Posts <%= name.split(' ')[0] %> Liked
-    </h3>
-    <% likes.forEach(function(post) {%>
-    <section class="post-container">
-      <img class="post-image" src="<%= post.imageUrl %>" alt="post image" />
-      <div class="post-text-content">
-        <p class="secondary"><%= post.createdAt.split(' ')[0] %></p>
-        <p class="message"><%= post.message %></p>
-      </div>
-    </section>
-    <% }); %>
   </body>
   <%- include('_footer') -%>
 </html>
