@@ -184,3 +184,12 @@ body {
   padding: 10px;
   text-align: center;
 }
+
+.header .logo-container {
+  margin-top: 100px;
+}
+
+.header .logo-container .logo {
+  margin: 0 auto;
+  width: 150px;
+}
