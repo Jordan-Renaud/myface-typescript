@@ -72,11 +72,11 @@ body {
 
 .user-page .background-blur {
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
   background-color: #252a38;
   opacity: 56%;
   position: absolute;
-  top: 150px;
+  top: 130px;
   z-index: -1;
 }
 
@@ -84,18 +84,20 @@ body {
   display: flex;
   gap: 20px;
   width: 100vw;
-  margin-top: 135px;
+  padding-top: 115px;
 }
 
 .user-page .profile-info-container .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 3px solid #dcdcdc;
+  margin-top: 20px;
+  border: 2px solid #dcdcdc;
+  margin-left: 20px;
 }
 
 .user-page .profile-info-container .profile-name {
-  margin: 15px 0;
+  margin: 60px 0 10px 0;
 }
 
 .user-page .profile-info-container .profile-username {
@@ -139,7 +141,6 @@ body {
 }
 
 .profile-userlist {
-  /* position: absolute; */
   top: 35px;
   left: 10px;
   border-radius: 50%;
@@ -159,7 +160,7 @@ body {
 }
 
 .header .menu-button {
-  background-color: #252a38;
+  background-color: transparent;
   font-size: 40px;
   border: none;
   float: right;
